@@ -14,3 +14,7 @@ provider "aws" {
 module "vpc" {
   source = "./modules/vpc"
 }
+
+module "jenkins" {
+	source = "./modules/jenkins"
+}
