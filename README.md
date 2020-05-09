@@ -1,8 +1,8 @@
 Goal of this project is to create a generic infrastructure for deploying web based applications to AWS using Terraform to control the infrastructure. 
 
-# MVP1 is Jenkins Fargate task
-# $JENKINS_HOME on EFS
-#An ALB to route the Jenkins traffic.
+- MVP1 is Jenkins Fargate task
+- #2 $JENKINS_HOME on EFS
+- #3 An ALB to route the Jenkins traffic.
 
 We will have 4 environments by default, controlled by Terraform Workspaces
 - Tools - For one off things like the Jenkins server
@@ -14,11 +14,11 @@ We will have 4 environments by default, controlled by Terraform Workspaces
 
 Currently broken: Need to change the task definitions to templates so we can parameterize the data.aws_caller_identity.current.account_id
 
-# Prepreqs:
+## Prepreqs:
  - Must have the back end bucket already - versioning enabled!
  - Must have admin access to AWS CLI
 
-Future Features:
+## Future Features:
 - SSM Parameter Store
 - Jenkins Fargate with EFS share
 - ECR Repo
@@ -32,6 +32,7 @@ Future Features:
 
 TODO: Create trello board so others can contribute
 
-# IAM
-ECS Task Execution Role - Rights the ECS task has while running
+## IAM
+Document IAM Roles here. Please do not blindly recreate or reuse these roles.
+- ECS Task Execution Role - Rights the ECS task has while running
 
